@@ -1,0 +1,26 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * CraftCMS RouterOS manager plugin for Craft CMS 3.x
+ *
+ * CraftCMS RouterOS manager Settings.twig
+ *
+ * @author    Paul Rock
+ * @copyright Copyright (c) 2021 Paul Rock
+ * @link      https://github.com/EvilFreelancer
+ * @package   \RouterOS\Manager
+ * @since     0.1
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("evilfreelancer\\craftcmsrouterosmanager\\assetbundles\\craftcmsrouterosmanager\\CraftcmsRouterosManagerAsset") %}
+
+{{ forms.textField({
+    label: 'Some Field',
+    instructions: 'Enter some setting here.',
+    id: 'someAttribute',
+    name: 'someAttribute',
+    value: settings['someAttribute']})
+}}

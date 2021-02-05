@@ -1,0 +1,20 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * CraftCMS RouterOS manager plugin for Craft CMS
+ *
+ * Statuses Widget Body
+ *
+ * @author    Paul Rock
+ * @copyright Copyright (c) 2021 Paul Rock
+ * @link      https://github.com/EvilFreelancer
+ * @package   \RouterOS\Manager
+ * @since     0.1
+ */
+#}
+
+{% set iconUrl = view.getAssetManager().getPublishedUrl('@evilfreelancer/craftcmsrouterosmanager/assetbundles/statuseswidget/dist', true) ~ '/img/Statuses-icon.svg' %}
+
+<img src="{{ iconUrl }}" height="64" width="64" />
+
+<p>{{ message }}</p>

@@ -1,0 +1,26 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * CraftCMS RouterOS manager plugin for Craft CMS
+ *
+ * ExecuteCommand Widget Settings
+ *
+ * @author    Paul Rock
+ * @copyright Copyright (c) 2021 Paul Rock
+ * @link      https://github.com/EvilFreelancer
+ * @package   \RouterOS\Manager
+ * @since     0.1
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("evilfreelancer\\craftcmsrouterosmanager\\assetbundles\\craftcmsrouterosmanager\\CraftcmsRouterosManagerAsset") %}
+
+{{ forms.textField({
+    label: 'Message',
+    instructions: 'Enter a message here.',
+    id: 'message',
+    name: 'message',
+    value: widget['message']})
+}}
