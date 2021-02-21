@@ -1,6 +1,6 @@
 {
   "name": "evilfreelancer/craftcms-routeros-manager",
-  "description": "A CraftCMS plugin for Mikrotik RouterOS devices management.",
+  "description": "A Craft CMS plugin for Mikrotik RouterOS devices management.",
   "type": "craft-plugin",
   "version": "0.1",
   "keywords": [
@@ -39,14 +39,14 @@
     }
   },
   "extra": {
-    "name": "CraftCMS RouterOS manager",
+    "name": "RouterOS manager",
     "handle": "routeros-manager",
     "developer": "Paul Rock",
     "developerUrl": "https://github.com/EvilFreelancer",
     "documentationUrl": "https://github.com/EvilFreelancer/craftcms-routeros-manager/blob/main/README.md",
     "changelogUrl": "https://raw.githubusercontent.com/EvilFreelancer/craftcms-routeros-manager/main/CHANGELOG.md",
     "components": {
-      "manager": "RouterOS\\Manager\\Services\\ManagerService"
+      "routerosManager": "RouterOS\\Manager\\Services\\ManagerService"
     }
   }
 }
