@@ -35,11 +35,57 @@ class Settings extends Model
     // =========================================================================
 
     /**
-     * Some field model attribute
+     * Default username
      *
      * @var string
      */
-    public $someAttribute = 'Some Default';
+    public $default_user = 'admin';
+
+    /**
+     * Default password
+     *
+     * @var string
+     */
+    public $default_pass;
+
+    /**
+     * Default API port
+     *
+     * @var integer
+     */
+    public $default_port = 8728;
+
+    /**
+     * Default SSH port
+     *
+     * @var integer
+     */
+    public $default_ssh_port = 22;
+
+    /**
+     * @var bool
+     */
+    public $default_ssl = false;
+
+    /**
+     * @var string
+     */
+    public $default_ssl_cipher = 'ADH:ALL';
+
+    /**
+     * @var bool
+     */
+    public $default_ssl_verify_peer = false;
+
+    /**
+     * @var bool
+     */
+    public $default_ssl_verify_peer_name = false;
+
+    /**
+     * @var bool
+     */
+    public $default_ssl_allow_self_signed = false;
 
     // Public Methods
     // =========================================================================
@@ -57,8 +103,33 @@ class Settings extends Model
     public function rules()
     {
         return [
-            ['someAttribute', 'string'],
-            ['someAttribute', 'default', 'value' => 'Some Default'],
+            ['default_user', 'string'],
+            ['default_user', 'default', 'value' => 'admin'],
+            ['default_pass', 'string'],
+            ['default_port', 'integer'],
+            ['default_port', 'default', 'value' => 8728],
+            ['default_ssh_port', 'integer'],
+            ['default_ssh_port', 'default', 'value' => 22],
+
+            ['default_ssl', 'boolean'],
+            ['default_ssl', 'default', 'value' => false],
+            ['default_ssl_cipher', 'string'],
+            ['default_ssl_cipher', 'default', 'value' => 'ADH:ALL'],
+            ['default_ssl_verify_peer', 'boolean'],
+            ['default_ssl_verify_peer', 'default', 'value' => false],
+            ['default_ssl_verify_peer_name', 'boolean'],
+            ['default_ssl_verify_peer_name', 'default', 'value' => false],
+            ['default_ssl_allow_self_signed', 'boolean'],
+            ['default_ssl_allow_self_signed', 'default', 'value' => false],
+
+            ['default_legacy', 'boolean'],
+            ['default_legacy', 'default', 'value' => false],
+            ['default_timeout', 'integer'],
+            ['default_timeout', 'default', 'value' => 10],
+            ['default_attempts', 'integer'],
+            ['default_attempts', 'default', 'value' => 10],
+            ['default_delay', 'integer'],
+            ['default_delay', 'default', 'value' => 1],
         ];
     }
 }
