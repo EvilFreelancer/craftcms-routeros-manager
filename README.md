@@ -15,11 +15,15 @@ To install the plugin, follow these instructions.
 
 1. Open your terminal and go to your Craft project:
 
-        cd /path/to/project
+```shell
+cd /path/to/project
+```
 
 2. Then tell Composer to load the plugin:
 
-        composer require evilfreelancer/craftcms-routeros-manager
+```shell
+composer require evilfreelancer/craftcms-routeros-manager
+```
 
 3. In the Control Panel, go to Settings → Plugins and click the “Install” button for CraftCMS RouterOS manager.
 
@@ -27,7 +31,7 @@ To install the plugin, follow these instructions.
 
 ### 1.0
 
-- [ ] Basic functionality
+- [x] Basic functionality
   - Table migration
     - id
     - remote config (should be obtained after adding new device)
