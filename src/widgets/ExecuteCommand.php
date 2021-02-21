@@ -193,7 +193,7 @@ class ExecuteCommand extends Widget
     public function getSettingsHtml()
     {
         return Craft::$app->getView()->renderTemplate(
-            'craft-cms-router-os-manager/_components/widgets/ExecuteCommand_settings',
+            'routeros-manager/_components/widgets/ExecuteCommand_settings',
             [
                 'widget' => $this
             ]
@@ -212,7 +212,7 @@ class ExecuteCommand extends Widget
         Craft::$app->getView()->registerAssetBundle(ExecuteCommandWidgetAsset::class);
 
         return Craft::$app->getView()->renderTemplate(
-            'craft-cms-router-os-manager/_components/widgets/ExecuteCommand_body',
+            'routeros-manager/_components/widgets/ExecuteCommand_body',
             [
                 'message' => $this->message
             ]

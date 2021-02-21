@@ -16,31 +16,31 @@
 {% extends "_layouts/cp" %}
 {% import "_includes/forms" as forms %}
 
-{% do view.registerAssetBundle("evilfreelancer\\craftcmsrouterosmanager\\assetbundles\\craftcmsrouterosmanager\\CraftcmsRouterosManagerAsset") %}
-{% do view.registerAssetBundle("evilfreelancer\\craftcmsrouterosmanager\\assetbundles\\routerosmanagercpsection\\RouterosManagerCPSectionAsset") %}
+{#{% do view.registerAssetBundle("evilfreelancer\\craftcmsrouterosmanager\\assetbundles\\craftcmsrouterosmanager\\CraftcmsRouterosManagerAsset") %}#}
+{#{% do view.registerAssetBundle("evilfreelancer\\craftcmsrouterosmanager\\assetbundles\\routerosmanagercpsection\\RouterosManagerCPSectionAsset") %}#}
 
 {# Link for the ? icon at the bottom of the page #}
-{% set docsUrl = "https://github.com/EvilFreelancer/craft-cms-router-os-manager/blob/master/README.md" %}
+{#{% set docsUrl = "https://github.com/EvilFreelancer/routeros-manager/blob/master/README.md" %}#}
 
 {# The title of this CP section #}
-{% set title = "CraftCMS RouterOS manager" %}
+{#{% set title = "CraftCMS RouterOS manager" %}#}
 
 {# The URL to this plugin's base CP section #}
-{% set pluginCpUrl = url('craft-cms-router-os-manager') %}
+{#{% set pluginCpUrl = url('routeros-manager') %}#}
 
 {# Get a URL to an image in our AssetBundle #}
-{% set iconUrl = view.getAssetManager().getPublishedUrl('@evilfreelancer/craftcmsrouterosmanager/assetbundles/routerosmanagercpsection/dist', true) ~ '/img/RouterosManager-icon.svg' %}
+{#{% set iconUrl = view.getAssetManager().getPublishedUrl('@evilfreelancer/craftcmsrouterosmanager/assetbundles/routerosmanagercpsection/dist', true) ~ '/img/RouterosManager-icon.svg' %}#}
 
 {# Content that should appear in the page header#}
-{% set extraPageHeaderHtml %}
-    <div class="buttons">
-        <a href="{{ pluginCpUrl }}" class="btn submit add icon">{{ "Click Me!"|t('craft-cms-router-os-manager') }}</a>
-    </div>
-{% endset %}
+{#{% set extraPageHeaderHtml %}#}
+{#    <div class="buttons">#}
+{#        <a href="{{ pluginCpUrl }}" class="btn submit add icon">{{ "Click Me!"|t('routeros-manager') }}</a>#}
+{#    </div>#}
+{#{% endset %}#}
 
 {# The content of the CP Section#}
-{% set content %}
-    <h2>{{ "RouterosManager CP Section body goes here"|t('craft-cms-router-os-manager') }}</h2>
-    <img src="{{ iconUrl }}" height="64" width="64" />
-    <p class="textline"></p>
-{% endset %}
+{#{% set content %}#}
+{#    <h2>{{ "RouterosManager CP Section body goes here"|t('routeros-manager') }}</h2>#}
+{#    <img src="{{ iconUrl }}" height="64" width="64" />#}
+{#    <p class="textline"></p>#}
+{#{% endset %}#}

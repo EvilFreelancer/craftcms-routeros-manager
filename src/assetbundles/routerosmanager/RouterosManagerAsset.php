@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2021 Paul Rock
  */
 
-namespace RouterOS\Manager\assetbundles\craftcmsrouterosmanager;
+namespace RouterOS\Manager\assetbundles\routerosmanager;
 
 use Craft;
 use craft\web\AssetBundle;
@@ -32,7 +32,7 @@ use craft\web\assets\cp\CpAsset;
  * @package   \RouterOS\Manager
  * @since     0.1
  */
-class CraftcmsRouterosManagerAsset extends AssetBundle
+class RouterosManagerAsset extends AssetBundle
 {
     // Public Methods
     // =========================================================================
@@ -43,7 +43,7 @@ class CraftcmsRouterosManagerAsset extends AssetBundle
     public function init()
     {
         // define the path that your publishable resources live
-        $this->sourcePath = "@evilfreelancer/craftcmsrouterosmanager/assetbundles/craftcmsrouterosmanager/dist";
+        $this->sourcePath = "@RouterOS/Manager/assetbundles/routerosmanager/dist";
 
         // define the dependencies
         $this->depends = [
@@ -53,11 +53,11 @@ class CraftcmsRouterosManagerAsset extends AssetBundle
         // define the relative path to CSS/JS files that should be registered with the page
         // when this asset bundle is registered
         $this->js = [
-            'js/CraftcmsRouterosManager.js',
+            'js/RouterosManager.js',
         ];
 
         $this->css = [
-            'css/CraftcmsRouterosManager.css',
+            'css/RouterosManager.css',
         ];
 
         parent::init();

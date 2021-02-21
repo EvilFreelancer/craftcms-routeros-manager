@@ -15,12 +15,45 @@
 
 {% import "_includes/forms" as forms %}
 
-{% do view.registerAssetBundle("evilfreelancer\\craftcmsrouterosmanager\\assetbundles\\craftcmsrouterosmanager\\CraftcmsRouterosManagerAsset") %}
+{% do view.registerAssetBundle("RouterOS\\Manager\\assetbundles\\routerosmanager\\RouterosManagerAsset") %}
 
 {{ forms.textField({
-    label: 'Some Field',
-    instructions: 'Enter some setting here.',
-    id: 'someAttribute',
-    name: 'someAttribute',
-    value: settings['someAttribute']})
+    label: 'Default username',
+    id: 'default_user',
+    name: 'default_user',
+    value: settings['default_user']})
 }}
+
+{{ forms.passwordField({
+    label: 'Default password',
+    id: 'default_pass',
+    name: 'default_pass',
+    value: settings['default_pass']})
+}}
+
+{{ forms.textField({
+    label: 'Default API port',
+    id: 'default_port',
+    name: 'default_port',
+    type: 'number',
+    value: settings['default_port']})
+}}
+
+{{ forms.textField({
+    label: 'Default SSH port',
+    id: 'default_ssh_port',
+    name: 'default_ssh_port',
+    type: 'number',
+    value: settings['default_ssh_port']})
+}}
+
+{#'default_ssl'                   => false,#}
+{#'default_ssl_cipher'            => 'ADH:ALL',#}
+{#'default_ssl_verify_peer'       => false,#}
+{#'default_ssl_verify_peer_name'  => false,#}
+{#'default_ssl_allow_self_signed' => false,#}
+
+{#'default_legacy'   => false,#}
+{#'default_timeout'  => 10,#}
+{#'default_attempts' => 10,#}
+{#'default_delay'    => 1,#}

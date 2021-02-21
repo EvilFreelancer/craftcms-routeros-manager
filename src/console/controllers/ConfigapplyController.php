@@ -30,12 +30,12 @@ use yii\helpers\Console;
  *
  * The actionIndex() method is what is executed if no sub-commands are supplied, e.g.:
  *
- * ./craft craft-cms-router-os-manager/configapply
+ * ./craft routeros-manager/configapply
  *
  * Actions must be in 'kebab-case' so actionDoSomething() maps to 'do-something',
  * and would be invoked via:
  *
- * ./craft craft-cms-router-os-manager/configapply/do-something
+ * ./craft routeros-manager/configapply/do-something
  *
  * @author    Paul Rock
  * @package   \RouterOS\Manager
@@ -47,7 +47,7 @@ class ConfigapplyController extends Controller
     // =========================================================================
 
     /**
-     * Handle craft-cms-router-os-manager/configapply console commands
+     * Handle routeros-manager/configapply console commands
      *
      * The first line of this method docblock is displayed as the description
      * of the Console Command in ./craft help
@@ -64,7 +64,7 @@ class ConfigapplyController extends Controller
     }
 
     /**
-     * Handle craft-cms-router-os-manager/configapply/do-something console commands
+     * Handle routeros-manager/configapply/do-something console commands
      *
      * The first line of this method docblock is displayed as the description
      * of the Console Command in ./craft help

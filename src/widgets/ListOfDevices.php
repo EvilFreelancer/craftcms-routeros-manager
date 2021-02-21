@@ -193,7 +193,7 @@ class ListOfDevices extends Widget
     public function getSettingsHtml()
     {
         return Craft::$app->getView()->renderTemplate(
-            'craft-cms-router-os-manager/_components/widgets/ListOfDevices_settings',
+            'routeros-manager/_components/widgets/ListOfDevices_settings',
             [
                 'widget' => $this
             ]
@@ -212,7 +212,7 @@ class ListOfDevices extends Widget
         Craft::$app->getView()->registerAssetBundle(ListOfDevicesWidgetAsset::class);
 
         return Craft::$app->getView()->renderTemplate(
-            'craft-cms-router-os-manager/_components/widgets/ListOfDevices_body',
+            'routeros-manager/_components/widgets/ListOfDevices_body',
             [
                 'message' => $this->message
             ]

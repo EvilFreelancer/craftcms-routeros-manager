@@ -193,7 +193,7 @@ class Statuses extends Widget
     public function getSettingsHtml()
     {
         return Craft::$app->getView()->renderTemplate(
-            'craft-cms-router-os-manager/_components/widgets/Statuses_settings',
+            'routeros-manager/_components/widgets/Statuses_settings',
             [
                 'widget' => $this
             ]
@@ -212,7 +212,7 @@ class Statuses extends Widget
         Craft::$app->getView()->registerAssetBundle(StatusesWidgetAsset::class);
 
         return Craft::$app->getView()->renderTemplate(
-            'craft-cms-router-os-manager/_components/widgets/Statuses_body',
+            'routeros-manager/_components/widgets/Statuses_body',
             [
                 'message' => $this->message
             ]

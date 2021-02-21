@@ -93,7 +93,7 @@ class Statistics extends Migration
     {
         $tablesCreated = false;
 
-        // routeros_manager_devices table
+        // routeros_manager_statistics table
         $tableSchema = Craft::$app->db->schema->getTableSchema('{{%routeros_manager_statistics}}');
         if ($tableSchema === null) {
             $tablesCreated = true;

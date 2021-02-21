@@ -11,7 +11,7 @@
 namespace RouterOS\Manager;
 
 use RouterOS\Manager\services\ManagerService as RouterOSManagerService;
-use RouterOS\Manager\variables\CraftcmsRouterosManagerVariable;
+use RouterOS\Manager\variables\RouterosManagerVariable;
 use RouterOS\Manager\models\Settings;
 use RouterOS\Manager\elements\DeviceType as DeviceTypeElement;
 use RouterOS\Manager\widgets\ListOfDevices as ListOfDevicesWidget;
@@ -46,7 +46,7 @@ use yii\base\Event;
  * @since     0.1
  *
  * @property  RouterOSManagerService $routerOSManager
- * @property  Settings $settings
+ * @property  Settings               $settings
  * @method    Settings getSettings()
  */
 class Plugin extends \craft\base\Plugin
@@ -115,18 +115,18 @@ class Plugin extends \craft\base\Plugin
             UrlManager::class,
             UrlManager::EVENT_REGISTER_SITE_URL_RULES,
             function (RegisterUrlRulesEvent $event) {
-                $event->rules['siteActionTrigger1'] = 'craft-cms-router-os-manager/devices-controller';
+                $event->rules['siteActionTrigger1'] = 'routeros-manager/devices-controller';
             }
         );
 
-        // Register our CP routes
-        Event::on(
-            UrlManager::class,
-            UrlManager::EVENT_REGISTER_CP_URL_RULES,
-            function (RegisterUrlRulesEvent $event) {
-                $event->rules['cpActionTrigger1'] = 'craft-cms-router-os-manager/devices-controller/do-something';
-            }
-        );
+//        // Register our CP routes
+//        Event::on(
+//            UrlManager::class,
+//            UrlManager::EVENT_REGISTER_CP_URL_RULES,
+//            function (RegisterUrlRulesEvent $event) {
+//                $event->rules['cpActionTrigger1'] = 'routeros-manager/devices-controller/do-something';
+//            }
+//        );
 
         // Register our elements
         Event::on(
@@ -155,7 +155,7 @@ class Plugin extends \craft\base\Plugin
             function (Event $event) {
                 /** @var CraftVariable $variable */
                 $variable = $event->sender;
-                $variable->set('craftcmsRouterosManager', CraftcmsRouterosManagerVariable::class);
+                $variable->set('routerosManager', RouterosManagerVariable::class);
             }
         );
 
@@ -170,27 +170,27 @@ class Plugin extends \craft\base\Plugin
             }
         );
 
-/**
- * Logging in Craft involves using one of the following methods:
- *
- * Craft::trace(): record a message to trace how a piece of code runs. This is mainly for development use.
- * Craft::info(): record a message that conveys some useful information.
- * Craft::warning(): record a warning message that indicates something unexpected has happened.
- * Craft::error(): record a fatal error that should be investigated as soon as possible.
- *
- * Unless `devMode` is on, only Craft::warning() & Craft::error() will log to `craft/storage/logs/web.log`
- *
- * It's recommended that you pass in the magic constant `__METHOD__` as the second parameter, which sets
- * the category to the method (prefixed with the fully qualified class name) where the constant appears.
- *
- * To enable the Yii debug toolbar, go to your user account in the AdminCP and check the
- * [] Show the debug toolbar on the front end & [] Show the debug toolbar on the Control Panel
- *
- * http://www.yiiframework.com/doc-2.0/guide-runtime-logging.html
- */
+        /**
+         * Logging in Craft involves using one of the following methods:
+         *
+         * Craft::trace(): record a message to trace how a piece of code runs. This is mainly for development use.
+         * Craft::info(): record a message that conveys some useful information.
+         * Craft::warning(): record a warning message that indicates something unexpected has happened.
+         * Craft::error(): record a fatal error that should be investigated as soon as possible.
+         *
+         * Unless `devMode` is on, only Craft::warning() & Craft::error() will log to `craft/storage/logs/web.log`
+         *
+         * It's recommended that you pass in the magic constant `__METHOD__` as the second parameter, which sets
+         * the category to the method (prefixed with the fully qualified class name) where the constant appears.
+         *
+         * To enable the Yii debug toolbar, go to your user account in the AdminCP and check the
+         * [] Show the debug toolbar on the front end & [] Show the debug toolbar on the Control Panel
+         *
+         * http://www.yiiframework.com/doc-2.0/guide-runtime-logging.html
+         */
         Craft::info(
             Craft::t(
-                'craft-cms-router-os-manager',
+                'routeros-manager',
                 '{name} plugin loaded',
                 ['name' => $this->name]
             ),
@@ -220,9 +220,9 @@ class Plugin extends \craft\base\Plugin
     protected function settingsHtml(): string
     {
         return Craft::$app->view->renderTemplate(
-            'craft-cms-router-os-manager/settings',
+            'routeros-manager/settings',
             [
-                'settings' => $this->getSettings()
+                'settings' => $this->getSettings(),
             ]
         );
     }

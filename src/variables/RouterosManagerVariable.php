@@ -26,7 +26,7 @@ use Craft;
  * @package   \RouterOS\Manager
  * @since     0.1
  */
-class CraftcmsRouterosManagerVariable
+class RouterosManagerVariable
 {
     // Public Methods
     // =========================================================================

@@ -53,7 +53,7 @@ class DevicesControllerController extends Controller
 
     /**
      * Handle a request going to our plugin's index action URL,
-     * e.g.: actions/craft-cms-router-os-manager/devices-controller
+     * e.g.: actions/routeros-manager/devices-controller
      *
      * @return mixed
      */
@@ -66,7 +66,7 @@ class DevicesControllerController extends Controller
 
     /**
      * Handle a request going to our plugin's actionDoSomething URL,
-     * e.g.: actions/craft-cms-router-os-manager/devices-controller/do-something
+     * e.g.: actions/routeros-manager/devices-controller/do-something
      *
      * @return mixed
      */
